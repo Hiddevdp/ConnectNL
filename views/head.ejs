@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectNL</title>
+
+    <!-- Global styles -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Page-specific styles -->
+    <% if (typeof cssFiles !=='undefined' && cssFiles) { %>
+        <% cssFiles.forEach(function(cssFile) { %>
+            <link rel="stylesheet" href="<%= cssFile %>">
+            <% }); %>
+                <% } %>
+
+                    <!-- Component-specific styles -->
+                    <link rel="stylesheet" href="styles/head.css">
+                    <link rel="stylesheet" href="styles/header.css">
+                    <link rel="stylesheet" href="styles/nav.css">
+</head>

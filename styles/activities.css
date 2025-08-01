@@ -1,0 +1,114 @@
+.activities-container {
+  width: 100%;
+  .activity {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px var(--lightgray);
+
+    .hero-img {
+      width: 100%;
+    }
+    h1 {
+      font-size: var(--font-size-heading);
+    }
+    .tags {
+      margin: 10px 0 20px 0;
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      .tag {
+        border: 1px solid var(--secondary-color-blue);
+        border-radius: 10px;
+        padding: 3px 5px;
+        font-size: var(--font-size-small);
+        color: var(--secondary-color-blue);
+      }
+    }
+    .activity-info {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      img {
+        height: 20px;
+        margin: 0 10px 0 0;
+      }
+      p {
+        font-size: var(--font-size-normal);
+        color: var(--darkgray);
+      }
+    }
+    .activity-description {
+      h2 {
+        font-size: var(--font-size-heading);
+        margin: 20px 0 10px 0;
+      }
+      p {
+        font-size: var(--font-size-normal);
+      }
+      button {
+        border: none;
+        background: none;
+        display: flex;
+        align-items: center;
+        margin: 10px 0 0 auto;
+        color: var(--darkgray);
+        svg {
+          height: 10px;
+          margin-left: 5px;
+          path {
+            fill: var(--darkgray);
+          }
+        }
+      }
+    }
+    .activity-bottom {
+      margin: 20px 0 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        svg {
+          height: 20px;
+        }
+      }
+      button.activity-apply-btn {
+        width: 250px;
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 25px;
+        background-color: var(--primary-color-orange);
+        font-size: var(--font-size-normal);
+        color: white;
+        font-size: var(--font-size-normal);
+        font-weight: bold;
+      }
+      .activity-apply-btn-extra {
+        background-color: var(--primary-color-orange);
+        height: 38px;
+        width: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0;
+        border-left: 2px solid white;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        svg {
+          height: 10px;
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}

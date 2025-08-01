@@ -1,12 +1,16 @@
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001; /* Higher than nav to stay on top */
+  background-color: white;
   display: flex;
   flex-grow: 0;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  background-color: black;
+  height: 50px;
   img {
-    width: 75px;
-    height: 12px;
+    height: 25px;
   }
 }

@@ -4,30 +4,27 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background-color: white;
   ul {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    background-color: black;
     height: 75px;
     margin: 0;
     padding: 0;
+    list-style: none;
     li a {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-
-      img {
-        height: 20px;
-        margin: 0 0 10px 0;
-      }
-
-      p {
-        color: white;
+      gap: 10px;
+      width: 20vw;
+      color: var(--darkgray);
+      svg {
+        height: 30px;
       }
     }
   }

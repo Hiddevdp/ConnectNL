@@ -10,7 +10,6 @@ app.use(express.static(path.join(__dirname, ".")));
 app.get("/", (req, res) => {
   res.render("index", {
     currentPage: "index",
-    cssFiles: ["styles/index.css"],
   });
 });
 
@@ -19,7 +18,6 @@ app.get("/:viewname", (req, res) => {
   res.render("index", {
     body: viewname,
     currentPage: viewname,
-    cssFiles: [`styles/${viewname}.css`],
   });
 });
 

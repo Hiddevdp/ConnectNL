@@ -8,17 +8,27 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, ".")));
 
 app.get("/", (req, res) => {
-  res.render("index", {
-    currentPage: "index",
-  });
+  res.render("index", { page: "activities" });
 });
 
-app.get("/:viewname", (req, res) => {
-  const viewname = req.params.viewname;
-  res.render("index", {
-    body: viewname,
-    currentPage: viewname,
-  });
+app.get("/activities", (req, res) => {
+  res.render("index", { page: "activities" });
+});
+
+app.get("/chat", (req, res) => {
+  res.render("index", { page: "chat" });
+});
+
+app.get("/account", (req, res) => {
+  res.render("index", { page: "account" });
+});
+
+app.get("/buddy", (req, res) => {
+  res.render("index", { page: "buddy" });
+});
+
+app.get("/new-post", (req, res) => {
+  res.render("index", { page: "new-post" });
 });
 
 const PORT = process.env.PORT || 3000;

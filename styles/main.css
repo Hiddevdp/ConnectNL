@@ -2,9 +2,11 @@
 
 @import url("header.css");
 @import url("nav.css");
-@import url("index.css");
 @import url("search.css");
 @import url("activities.css");
+@import url("chat.css");
+@import url("account.css");
+@import url("new-post.css");
 
 :root {
   /* Colors */
@@ -29,6 +31,6 @@
 
 body {
   font-family: var(--font-family-primary);
-  padding-top: 160px; /* Adjust based on header + search height */
-  padding-bottom: 75px; /* For bottom nav */
+  padding-top: 50px;
+  padding-bottom: 75px;
 }

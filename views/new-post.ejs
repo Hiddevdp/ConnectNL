@@ -1,0 +1,38 @@
+<section class="new-post-page">
+    <h1>New post</h1>
+    <form class="new-post-form" action="">
+        <label name="image" for="image">upload an inviting photo</label>
+        <div class="img-upload">
+            <input type="file" name="image">
+        </div>
+        <label for="title">Choose an inviting title for your event</label>
+        <input type="text" name="title" placeholder="Title">
+
+        <div class="date-time">
+            <input type="date">
+            <input type="time">
+        </div>
+        <input type="text" placeholder="Location">
+        <div class="amount-number"><label for="amount">Maximum amount of people</label>
+            <input type="number" name="amount" placeholder="2">
+        </div>
+        <label for="description">Give a clear and engaging description of your event. You can include:
+            <br>- The goal or purpose of the event
+            <br>- What is expected from the attendees
+            <br>- Who the event is for (e.g. beginners, families, Dutch speakers, etc.)
+            <br>- What will happen during the event (e.g. games, discussion, walk, food, etc.)
+            <br>- What to bring (e.g. ID, food, warm clothes)
+            <br>- Language(s) spoken during the event
+            <br>- Any important rules or notes (e.g. no alcohol, RSVP required)</label>
+        <textarea class="description" type="text" name="description" placeholder="Description" rows="4"></textarea>
+        <a class="add-tags" href="">
+            <p>Add tags </p><svg class="chevron" viewBox="0 0 11 6" fill="none">
+                <path
+                    d="M5.5 6C5.33667 6 5.174 5.93942 5.04937 5.81791L0.186682 1.06358C-0.0622272 0.819927 -0.0622272 0.425754 0.186682 0.18274C0.43559 -0.0609132 0.838747 -0.0609132 1.0876 0.18274L5.5 4.49648L9.9124 0.18274C10.1613 -0.0609132 10.5645 -0.0609132 10.8133 0.18274C11.0622 0.426102 11.0622 0.819927 10.8133 1.06358L5.95034 5.81791C5.82606 5.93942 5.66303 6 5.5 6Z"
+                    fill="#8C8C8C" />
+            </svg>
+        </a>
+        <div class="bottom-buttons"><button class="cancel-btn">Cancel</button><button class="post-event-btn">Post
+                event</button></div>
+    </form>
+</section>

@@ -22,10 +22,29 @@ nav {
       text-decoration: none;
       gap: 10px;
       width: 20vw;
+      padding: 10px;
       color: var(--darkgray);
+      font-size: var(--font-size-small);
       svg {
-        height: 30px;
+        height: 25px;
       }
     }
+  }
+}
+.page-account nav a[href="/account"],
+.page-activities nav a[href="/activities"],
+.page-chat nav a[href="/chat"],
+.page-new-post nav a[href="/new-post"] {
+  color: var(--primary-color-orange);
+
+  svg path {
+    stroke: var(--primary-color-orange);
+  }
+}
+.page-buddy nav a[href="/buddy"] {
+  color: var(--primary-color-orange);
+
+  svg path {
+    fill: var(--primary-color-orange);
   }
 }

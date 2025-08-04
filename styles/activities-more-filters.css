@@ -1,11 +1,7 @@
-.search-nav {
-  position: fixed;
-  top: 50px; /* Position below the header */
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  padding: 0 0 20px 0;
+.more-filters-page {
+  h2 {
+    padding: 10px;
+  }
   .searchbar {
     width: 100%;
     display: flex;
@@ -30,11 +26,12 @@
       stroke-width: 2px;
     }
   }
-
   .filter-container {
     width: 100%;
     padding: 0 10px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
     .filter-btn {
       padding: 5px;
@@ -67,9 +64,4 @@
       }
     }
   }
-}
-
-.search-filler-block {
-  width: 100%;
-  height: 110px;
 }

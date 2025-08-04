@@ -7,28 +7,30 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, ".")));
 
+const pages = ["activities", "chat", "account", "buddy", "new-post"];
+const subpages = {
+  account: ["settings", "profile", "privacy"],
+  activities: ["more-filters", "my-activities"],
+};
+
 app.get("/", (req, res) => {
   res.render("index", { page: "activities" });
 });
 
-app.get("/activities", (req, res) => {
-  res.render("index", { page: "activities" });
+// Routing for main pages
+pages.forEach((page) => {
+  app.get(`/${page}`, (req, res) => {
+    res.render("index", { page });
+  });
 });
 
-app.get("/chat", (req, res) => {
-  res.render("index", { page: "chat" });
-});
-
-app.get("/account", (req, res) => {
-  res.render("index", { page: "account" });
-});
-
-app.get("/buddy", (req, res) => {
-  res.render("index", { page: "buddy" });
-});
-
-app.get("/new-post", (req, res) => {
-  res.render("index", { page: "new-post" });
+// Routing for subpages
+Object.entries(subpages).forEach(([mainPage, subs]) => {
+  subs.forEach((subpage) => {
+    app.get(`/${mainPage}/${subpage}`, (req, res) => {
+      res.render("index", { page: mainPage, subpage });
+    });
+  });
 });
 
 const PORT = process.env.PORT || 3000;

@@ -1,22 +1,10 @@
 <%- include('head.ejs') %>
 
-
     <body class="page-<%= page %>">
         <%- include('header.ejs') %>
             <main>
-                <% if (page==='activities' ) { %>
-                    <%- include('activities') %>
-                        <% } else if (page==='chat' ) { %>
-                            <%- include('chat') %>
-                                <% } else if (page==='account' ) { %>
-                                    <%- include('account') %>
-                                        <% } else if (page==='buddy' ) { %>
-                                            <%- include('buddy') %>
-                                                <% } else if (page==='new-post' ) { %>
-                                                    <%- include('new-post') %>
-                                                        <% } else { %>
-                                                            <%- include('activities') %>
-                                                                <% } %>
+                <% let templateName=page; if (typeof subpage !=='undefined' ) { templateName=page + '-' + subpage; } %>
+                    <%- include(templateName) %>
             </main>
             <%- include('nav.ejs') %>
     </body>

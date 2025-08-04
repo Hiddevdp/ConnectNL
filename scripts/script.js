@@ -1,20 +1,31 @@
 // Filter button functionality
+// Filter button functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const filterBtns = document.querySelectorAll(".filter-btn");
+  // Find all filter containers
+  const filterContainers = document.querySelectorAll(".filter-container");
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      // Remove active class from all buttons
-      filterBtns.forEach((b) => b.classList.remove("active"));
+  filterContainers.forEach((container) => {
+    const filterBtns = container.querySelectorAll(".filter-btn");
 
-      // Add active class to clicked button
-      this.classList.add("active");
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        // Remove active class from buttons only within this container
+        filterBtns.forEach((b) => b.classList.remove("active"));
 
-      // Get the filter value
-      const filterValue = this.getAttribute("data-filter");
-      console.log("Filter selected:", filterValue);
+        // Add active class to clicked button
+        this.classList.add("active");
 
-      // Here you would implement your filter logic
+        // Get the filter value
+        const filterValue = this.getAttribute("data-filter");
+        console.log(
+          "Filter selected:",
+          filterValue,
+          "in container:",
+          container
+        );
+
+        // Here you would implement your filter logic for this specific container
+      });
     });
   });
 

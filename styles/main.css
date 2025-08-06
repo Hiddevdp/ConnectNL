@@ -8,6 +8,7 @@
 @import url("account.css");
 @import url("new-post.css");
 @import url("activities-more-filters.css");
+@import url("chat-message.css");
 
 :root {
   /* Colors */
@@ -30,8 +31,16 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-family-primary);
   padding-top: 50px;
   padding-bottom: 75px;
+  min-height: 100vh;
+}
+main {
+  min-height: calc(100vh - 125px);
 }

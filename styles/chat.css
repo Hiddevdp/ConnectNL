@@ -8,45 +8,43 @@
     color: var(--darkgray);
     font-size: var(--font-size-heading);
   }
-  .chats {
-    .chat {
-      display: flex;
-      align-items: center;
+}
+.chat {
+  display: flex;
+  align-items: center;
 
-      padding: 20px 0;
-      text-decoration: none;
-      .profile-img {
-        height: 50px;
-        border-radius: 25px;
-      }
-      div {
-        margin: 0 10px;
-        h2 {
-          font-size: large;
-          color: black;
-        }
-        p {
-          width: 85%;
-          -webkit-line-clamp: 1;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          color: var(--darkgray);
-        }
-      }
-      svg {
-        height: 20px;
-        width: 20px;
-        flex-shrink: 0;
-        transform: rotate(-90deg);
-        path {
-          fill: var(--darkgray);
-        }
-      }
-      &:not(:last-of-type) {
-        border-bottom: 1px solid var(--lightgray);
-      }
+  padding: 20px 0;
+  text-decoration: none;
+  .profile-img {
+    height: 50px;
+    border-radius: 25px;
+  }
+  div {
+    margin: 0 10px;
+    h2 {
+      font-size: large;
+      color: black;
     }
+    p {
+      width: 85%;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      color: var(--darkgray);
+    }
+  }
+  svg {
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    transform: rotate(-90deg);
+    path {
+      fill: var(--darkgray);
+    }
+  }
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--lightgray);
   }
 }

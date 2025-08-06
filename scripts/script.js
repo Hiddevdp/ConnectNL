@@ -65,4 +65,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  const applyBtnExtras = document.querySelectorAll(".activity-apply-btn-extra");
+
+  applyBtnExtras.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const applyBtnContainer = this.closest(".apply-btn-container");
+
+      // Toggle the expanded state
+      if (applyBtnContainer.classList.contains("expanded")) {
+        applyBtnContainer.classList.remove("expanded");
+      } else {
+        applyBtnContainer.classList.add("expanded");
+      }
+    });
+  });
 });

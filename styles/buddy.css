@@ -1,0 +1,20 @@
+.buddy-page {
+  padding: 10px;
+  height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .buddy-intro-txt {
+    width: 75%;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .activity-apply-btn {
+    display: flex;
+    justify-content: center;
+  }
+}

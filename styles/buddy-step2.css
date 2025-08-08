@@ -1,0 +1,45 @@
+.step2 {
+  margin: auto 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 125px);
+  .buddy-intro-txt2 {
+    width: 75%;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .step2-content {
+    flex: 1; /* Takes up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the content */
+    align-items: center;
+    width: 100%;
+  }
+  .searchbar {
+    width: 100%;
+    select,
+    input {
+      margin: 10px 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+  h2 {
+    margin-right: auto;
+  }
+  .dropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+  }
+  .activity-apply-btn {
+    margin-top: auto;
+    align-self: center;
+  }
+}

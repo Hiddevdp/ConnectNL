@@ -50,21 +50,6 @@
         }
       }
     }
-    .hobby-section {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 5px;
-      margin: 20px 0;
-      p {
-        font-size: var(--font-size-small);
-        color: var(--secondary-color-blue);
-        font-weight: bold;
-        padding: 5px 10px;
-        border: 1px solid var(--secondary-color-blue);
-        border-radius: 5px;
-      }
-    }
   }
   .post-section {
     display: flex;
@@ -91,5 +76,20 @@
         margin-left: auto;
       }
     }
+  }
+}
+.hobby-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin: 20px 0;
+  p {
+    font-size: var(--font-size-small);
+    color: var(--secondary-color-blue);
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid var(--secondary-color-blue);
+    border-radius: 5px;
   }
 }

@@ -9,6 +9,8 @@
 @import url("new-post.css");
 @import url("activities-more-filters.css");
 @import url("chat-message.css");
+@import url("buddy.css");
+@import url("buddy-step2.css");
 
 :root {
   /* Colors */

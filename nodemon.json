@@ -1,0 +1,10 @@
+{
+  "watch": ["server.js", "views/", "styles/", "scripts/"],
+  "ext": "js,ejs,css,html",
+  "ignore": ["node_modules/", "*.log"],
+  "exec": "node server.js",
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "delay": "1000"
+}

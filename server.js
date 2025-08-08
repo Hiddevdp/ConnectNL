@@ -12,6 +12,7 @@ const subpages = {
   account: ["settings", "profile", "privacy"],
   activities: ["more-filters", "my-activities"],
   chat: ["message"],
+  buddy: ["step2"],
 };
 
 app.get("/", (req, res) => {

@@ -1,0 +1,37 @@
+<section class="create-form-page">
+    <form class="new-post-form" action="">
+        <div class="img-container">
+            <div class="img-upload">
+
+                <input type="file" name="image">
+            </div>
+            <div class="nickname">
+                <input type="text" name="nickname" placeholder="Nickname">
+                <div class="searchbar dropdown">
+                    <select name="You are a..." class="you-are">
+                        <option value="" disabled selected hidden>You are a...</option>
+                        <option value="">Dutch local</option>
+                        <option value="">Newcomer</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="birthday">Day of birth</label>
+            <input type="date" name="birthday">
+        </div>
+
+        <input type="text" placeholder="Zipcode">
+        <textarea class="description" type="text" name="description" placeholder="Something fun about you"
+            rows="4"></textarea>
+        <input type="email" placeholder="Email adress">
+        <div>
+            <input name="password" type="password" placeholder="Password">
+            <label for="password">At least 10 characters</label>
+        </div>
+        <div class="bottom-buttons">
+            <a href="/create-account" class="cancel-btn">Back</a>
+            <a href="/create-account-hobbies" class="post-event-btn">Next</a>
+        </div>
+    </form>
+</section>

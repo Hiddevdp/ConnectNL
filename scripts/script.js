@@ -1,19 +1,106 @@
 // Filter button functionality
 // Filter button functionality
 document.addEventListener("DOMContentLoaded", function () {
+  // Authentication system
+  let loggedIn = false;
+
+  // Protected routes that require login
+  const protectedRoutes = ["/account", "/new-post", "/buddy", "/chat"];
+  const protectedSubpages = [
+    "settings",
+    "profile",
+    "privacy",
+    "more-filters",
+    "my-activities",
+    "message",
+    "step2",
+    "result",
+  ];
+
+  // Check if current route is protected
+  function isProtectedRoute(path) {
+    // Check main routes
+    for (let route of protectedRoutes) {
+      if (path.startsWith(route)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  // Redirect to create account if not logged in
+  function checkAuth() {
+    const currentPath = window.location.pathname;
+
+    if (!loggedIn && isProtectedRoute(currentPath)) {
+      window.location.href = "/create-account";
+      return false;
+    }
+    return true;
+  }
+
+  // Handle create account completion
+  function completeRegistration() {
+    loggedIn = true;
+    localStorage.setItem("loggedIn", "true"); // Persist across page reloads
+    console.log("User logged in successfully");
+  }
+
+  // Load login state from localStorage on page load
+  function loadAuthState() {
+    const stored = localStorage.getItem("loggedIn");
+    loggedIn = stored === "true";
+  }
+
+  // Load auth state first
+  loadAuthState();
+
+  // Check authentication for current page
+  checkAuth();
+
+  // Handle create account button
+  const createAccountBtn = document.getElementById("create-account");
+  if (createAccountBtn) {
+    createAccountBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      completeRegistration();
+
+      // Redirect to activities page after account creation
+      window.location.href = "/activities";
+    });
+  }
+
+  // Handle navigation clicks for protected routes
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest("a");
+    if (link && link.href) {
+      const url = new URL(link.href);
+      const path = url.pathname;
+
+      if (!loggedIn && isProtectedRoute(path)) {
+        e.preventDefault();
+        window.location.href = "/create-account";
+      }
+    }
+  });
+
   // Find all filter containers
   const filterContainers = document.querySelectorAll(".filter-container");
 
   filterContainers.forEach((container) => {
     const filterBtns = container.querySelectorAll(".filter-btn");
+    const allowMultiple = container.dataset.multiple === "true";
 
     filterBtns.forEach((btn) => {
       btn.addEventListener("click", function () {
-        // Remove active class from buttons only within this container
-        filterBtns.forEach((b) => b.classList.remove("active"));
-
-        // Add active class to clicked button
-        this.classList.add("active");
+        if (allowMultiple) {
+          // For multiple selection containers - just toggle the clicked button
+          this.classList.toggle("active");
+        } else {
+          // For single selection containers - remove active from all, add to clicked
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+        }
 
         // Get the filter value
         const filterValue = this.getAttribute("data-filter");
@@ -23,8 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "in container:",
           container
         );
-
-        // Here you would implement your filter logic for this specific container
       });
     });
   });
@@ -79,4 +164,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  const findBuddyBtn = document.getElementById("findBuddyBtn");
+  const loadingOverlay = document.getElementById("loadingOverlay");
+
+  console.log("Find buddy button:", findBuddyBtn); // Debug line
+  console.log("Loading overlay:", loadingOverlay); // Debug line
+
+  if (findBuddyBtn && loadingOverlay) {
+    findBuddyBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("Button clicked - showing overlay"); // Debug line
+
+      loadingOverlay.style.display = "flex";
+
+      setTimeout(() => {
+        console.log("Navigating to result page"); // Debug line
+        window.location.href = "/buddy/result";
+      }, 2000);
+    });
+  } else {
+    console.log("Elements not found!");
+  }
+
+  // Debug logging
+  console.log("Auth system initialized. Logged in:", loggedIn);
+  console.log("Current path:", window.location.pathname);
+  console.log(
+    "Is protected route:",
+    isProtectedRoute(window.location.pathname)
+  );
 });

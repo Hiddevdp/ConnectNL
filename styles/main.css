@@ -11,6 +11,12 @@
 @import url("chat-message.css");
 @import url("buddy.css");
 @import url("buddy-step2.css");
+@import url("buddy-result.css");
+@import url("create-account.css");
+@import url("create-form.css");
+@import url("create-account-hobbies.css");
+@import url("posts.css");
+@import url("settings.css");
 
 :root {
   /* Colors */

@@ -1,0 +1,15 @@
+.create-account-hobbies-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  .filter-container {
+    margin: 20px 0;
+  }
+  .post-event-btn {
+    width: 250px;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--secondary-color-blue);
+  }
+}

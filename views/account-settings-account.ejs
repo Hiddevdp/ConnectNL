@@ -1,0 +1,39 @@
+<section class="account-settings-page">
+    <section class="create-form-page">
+        <form class="new-post-form" action="">
+            <div class="img-container">
+                <div class="img-upload">
+
+                    <input type="file" name="image">
+                </div>
+                <div class="nickname">
+                    <input type="text" name="nickname" placeholder="Nickname" value="Hidde25">
+                    <div class="searchbar dropdown">
+                        <select name="You are a..." class="you-are">
+                            <option value="" disabled selected hidden>You are a...</option>
+                            <option value="" selected>Dutch local</option>
+                            <option value="">Newcomer</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="birthday">Day of birth</label>
+                <input type="date" name="birthday" value="1999-03-25">
+            </div>
+
+            <input type="text" placeholder="Zipcode" value="1234AB">
+            <textarea class="description" type="text" name="description" placeholder="Something fun about you"
+                rows="4">I like turtles</textarea>
+            <input type="email" placeholder="Email adress" value="hiddevanderplaat@gmail.com">
+            <div>
+                <input name="password" type="password" placeholder="Password" value="wachtwoord">
+                <label for="password">At least 10 characters</label>
+            </div>
+            <div class="bottom-buttons">
+                <a href="/account/settings" class="cancel-btn">Back</a>
+                <a href="/account" class="post-event-btn">Save</a>
+            </div>
+        </form>
+    </section>
+</section>

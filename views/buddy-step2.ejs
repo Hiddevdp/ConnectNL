@@ -6,7 +6,7 @@
         <h2>My info</h2>
         <div></div>
         <form action="" class="searchbar">
-            <input type="text" placeholder="1062 HD, Amsterdam">
+            <input type="text" value="1062 HD, Amsterdam">
             <svg viewBox="0 0 17 17" fill="none">
                 <path
                     d="M15.3727 4.35052L8.26109 11.4746C7.55292 12.184 5.45073 12.5126 4.98109 12.0422C4.51146 11.5717 4.832 9.46582 5.54018 8.7564L12.6592 1.62481C12.8348 1.43294 13.0473 1.2787 13.2841 1.17139C13.5208 1.06408 13.7768 1.00591 14.0365 1.00043C14.2963 0.994952 14.5545 1.04225 14.7955 1.13949C15.0365 1.23672 15.2554 1.3819 15.4388 1.5662C15.6223 1.7505 15.7666 1.97012 15.863 2.21182C15.9594 2.45353 16.0059 2.71228 15.9998 2.97249C15.9936 3.2327 15.9348 3.48898 15.827 3.72582C15.7192 3.96265 15.5647 4.17518 15.3727 4.35052Z"
@@ -34,18 +34,36 @@
                     < 50km </option>
             </select>
         </form>
-        <h2>My hobbies</h2>
+        <div class="hobbies-head">
+            <h2>My hobbies</h2><button>add/remove<svg viewBox="0 0 11 6" fill="none">
+                    <path
+                        d="M5.5 6C5.33667 6 5.174 5.93942 5.04937 5.81791L0.186682 1.06358C-0.0622272 0.819927 -0.0622272 0.425754 0.186682 0.18274C0.43559 -0.0609132 0.838747 -0.0609132 1.0876 0.18274L5.5 4.49648L9.9124 0.18274C10.1613 -0.0609132 10.5645 -0.0609132 10.8133 0.18274C11.0622 0.426102 11.0622 0.819927 10.8133 1.06358L5.95034 5.81791C5.82606 5.93942 5.66303 6 5.5 6Z"
+                        fill="#8C8C8C" />
+                </svg></button>
+        </div>
         <section class="hobby-section">
             <p>Drinks</p>
             <p>Fitness</p>
             <p>Gaming</p>
             <p>Fishing</p>
             <p>Movies</p>
-
+        </section>
+        <h2>Gender preference</h2>
+        <section class="filter-container">
+            <button class="filter-btn active" data-filter="activities">All</button>
+            <button class="filter-btn" data-filter="all">Female</button>
+            <button class="filter-btn" data-filter="restaurants">Male</button>
+            <button class="filter-btn" data-filter="restaurants">Genderneutral</button>
         </section>
 
-        <a href="/buddy/step2" class="activity-apply-btn">
+        <a href="#" class="activity-apply-btn" id="findBuddyBtn">
             <p>Find buddy</p>
         </a>
+        <div id="loadingOverlay" style="display: none;">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Finding your perfect buddy...</p>
+            </div>
+        </div>
     </section>
 </section>

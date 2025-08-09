@@ -1,4 +1,8 @@
 .more-filters-page {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 75px;
+
   h2 {
     padding: 10px;
   }
@@ -26,41 +30,61 @@
       stroke-width: 2px;
     }
   }
-  .filter-container {
-    width: 100%;
-    padding: 0 10px;
+
+  .apply-filters-btn {
+    position: fixed;
+    bottom: 70px;
+    align-self: center;
     display: flex;
+    text-decoration: none;
+    border: none;
+    z-index: 2;
+    width: 250px;
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    .filter-btn {
-      padding: 5px;
-      min-width: 50px;
-      border: 1px solid var(--secondary-color-blue);
-      color: var(--secondary-color-blue);
-      border-radius: 5px;
-      background-color: white;
-      font-weight: bold;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .active {
-      background-color: var(--secondary-color-blue);
-      color: white;
-    }
-    .more-filters-btn {
-      text-decoration: none;
-      margin-left: auto;
-      background: none;
-      border: none;
-      display: flex;
-      align-items: center;
-      color: var(--darkgray);
-      svg {
-        height: 20px;
-        path {
-          stroke: var(--darkgray);
-        }
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 25px;
+    background-color: var(--secondary-color-blue);
+    color: white;
+    font-size: var(--font-size-normal);
+    font-weight: bold;
+  }
+}
+.filter-container {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  .filter-btn {
+    padding: 5px;
+    min-width: 50px;
+    border: 1px solid var(--secondary-color-blue);
+    color: var(--secondary-color-blue);
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .active {
+    background-color: var(--secondary-color-blue);
+    color: white;
+  }
+  .more-filters-btn {
+    text-decoration: none;
+    margin-left: auto;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: var(--darkgray);
+    svg {
+      height: 20px;
+      path {
+        stroke: var(--darkgray);
       }
     }
   }

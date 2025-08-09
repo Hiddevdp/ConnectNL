@@ -1,0 +1,53 @@
+.create-form-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  height: calc(100vh - 125px);
+  .new-post-form {
+    height: 100%;
+    .img-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      gap: 10px;
+      .img-upload {
+        flex-shrink: 0;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+
+        input[type="file"] {
+          width: 100px;
+        }
+      }
+      .nickname {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        input[name="nickname"] {
+          margin: 0;
+        }
+        .you-are {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .bottom-buttons {
+    margin-top: auto;
+    a {
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
+input::file-selector-button {
+  display: block;
+  margin: auto;
+}

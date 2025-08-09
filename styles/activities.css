@@ -201,7 +201,7 @@
     }
   }
 }
-.activity-apply-btn {
+.activities-container .activity .activity-bottom .activity-apply-btn {
   text-decoration: none;
   border: none;
   z-index: 2;

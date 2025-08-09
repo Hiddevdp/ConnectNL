@@ -1,0 +1,39 @@
+.posts-h1 {
+  text-align: center;
+  font-size: var(--font-size-heading);
+}
+
+.applied {
+  background-color: white !important;
+  color: var(--primary-color-orange) !important;
+  border: 2px solid var(--primary-color-orange) !important;
+}
+.cancel-activity {
+  margin: 20px 0;
+  text-decoration: none;
+  color: black;
+  font-size: var(--font-size-large);
+  width: 100%;
+  display: block;
+  text-align: center;
+  &::before {
+    content: "X";
+    margin-right: 5px;
+  }
+}
+.my-posts {
+  height: calc(100vh - 235px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .posts-h1 {
+    position: absolute;
+    top: 160px;
+  }
+  svg {
+    margin-top: 50px;
+    width: 50px;
+    transform: rotate(16deg);
+  }
+}

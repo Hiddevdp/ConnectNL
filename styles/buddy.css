@@ -9,19 +9,22 @@
   .buddy-intro-txt {
     width: 75%;
     text-align: center;
-    flex: 1;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    span {
+      color: var(--darkgray);
+      margin: 10px 0;
+    }
   }
   .activity-apply-btn {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
     text-decoration: none;
     border: none;
     z-index: 2;
     width: 250px;
-    flex-direction: row;
-    justify-content: center;
     padding: 10px;
     border-radius: 25px;
     background-color: var(--primary-color-orange);

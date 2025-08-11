@@ -28,6 +28,8 @@ const subpages = {
     "settings",
     "settings-account",
     "settings-app",
+    "privacy-policy",
+    "terms-of-use",
   ],
   activities: ["more-filters", "my-activities"],
   chat: ["message"],

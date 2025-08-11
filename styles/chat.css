@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 10px;
   h1 {
     margin: 0 auto 20px auto;
     color: var(--darkgray);

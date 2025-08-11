@@ -1,5 +1,4 @@
 .buddy-page {
-  padding: 10px;
   height: calc(100vh - 125px);
   display: flex;
   flex-direction: column;

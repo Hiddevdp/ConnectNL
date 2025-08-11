@@ -1,0 +1,23 @@
+.terms {
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  h2 {
+    margin: 20px 0 10px 0;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  ul li {
+    list-style: disc !important;
+    display: list-item !important;
+  }
+  p,
+  li {
+    color: var(--darkgray);
+  }
+}
